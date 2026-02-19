@@ -3,8 +3,11 @@ import FileUpload from './components/FileUpload';
 import DrugInput from './components/DrugInput';
 import Results from './components/Results';
 
-const API_BASE = process.env.REACT_APP_API_URL || 'http://localhost:3001';
-
+// ✅ Production-ready API base
+const API_BASE =
+  process.env.REACT_APP_API_URL ||
+  "https://pharma-guard-uwje.onrender.com";
+  
 function App() {
   const [vcfFile, setVcfFile] = useState(null);
   const [drugs, setDrugs] = useState('');

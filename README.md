@@ -1,21 +1,15 @@
 # PharmaGuard 🧬💊
 
 **CPIC-Aligned Pharmacogenomic Risk Prediction Platform**
-
-[![RIFT 2026](https://img.shields.io/badge/RIFT-2026-blue)](https://rift.ai)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Node.js](https://img.shields.io/badge/Node.js-18+-green)](https://nodejs.org)
-[![React](https://img.shields.io/badge/React-18-blue)](https://reactjs.org)
-
 ---
 
 ## 🔗 Quick Links
 
 | Resource | Link |
 |----------|------|
-| 🌐 **Live Demo** | [https://pharmaguard-demo.vercel.app](https://pharmaguard-demo.vercel.app) |
-| 🎥 **Demo Video (LinkedIn)** | [Watch on LinkedIn](https://www.linkedin.com/posts/YOUR_VIDEO_POST) |
-| 📂 **GitHub Repository** | [github.com/yourusername/PharmaGuard](https://github.com/yourusername/PharmaGuard) |
+| 🌐 **Live Demo** | [https://pharma-guard-ten.vercel.app/]|
+| 🎥 **Demo Video (LinkedIn)** | [] |
+| 📂 **GitHub Repository** | [https://github.com/Riyansh-adi/Pharma-Guard-.git] |
 
 ---
 

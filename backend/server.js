@@ -6,14 +6,34 @@ const path = require('path');
 const analyzeRoutes = require('./routes/analyze');
 
 const app = express();
+
+// Render automatically provides PORT
 const PORT = process.env.PORT || 3001;
 
-// Middleware
-app.use(cors());
+// If deployed behind proxy (Render / Vercel)
+app.set('trust proxy', 1);
+
+/* ===============================
+   MIDDLEWARE
+================================= */
+
+// CORS Configuration (Allow all for now)
+app.use(
+  cors({
+    origin: '*', // Later you can restrict to your Vercel domain
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type']
+  })
+);
+
 app.use(express.json());
 
-// Configure multer for file uploads
+/* ===============================
+   MULTER CONFIGURATION
+================================= */
+
 const storage = multer.memoryStorage();
+
 const upload = multer({
   storage: storage,
   limits: {
@@ -21,44 +41,68 @@ const upload = multer({
   },
   fileFilter: (req, file, cb) => {
     const ext = path.extname(file.originalname).toLowerCase();
+
     if (ext !== '.vcf') {
       return cb(new Error('Only .vcf files are allowed'), false);
     }
+
     cb(null, true);
   }
 });
 
-// Make upload available to routes
+// Make upload accessible in routes
 app.set('upload', upload);
 
-// Routes
+/* ===============================
+   ROUTES
+================================= */
+
 app.use('/api', analyzeRoutes);
 
-// Health check
+// Health Check Route (Important for Render)
 app.get('/health', (req, res) => {
-  res.json({ status: 'ok', timestamp: new Date().toISOString() });
+  res.status(200).json({
+    status: 'ok',
+    timestamp: new Date().toISOString()
+  });
 });
 
-// Error handling middleware
+/* ===============================
+   GLOBAL ERROR HANDLER
+================================= */
+
 app.use((err, req, res, next) => {
-  console.error(err.stack);
-  
+  console.error("❌ Error:", err);
+
   if (err instanceof multer.MulterError) {
     if (err.code === 'LIMIT_FILE_SIZE') {
-      return res.status(400).json({ error: 'File size exceeds 5MB limit' });
+      return res.status(400).json({
+        error: 'File size exceeds 5MB limit'
+      });
     }
-    return res.status(400).json({ error: err.message });
+
+    return res.status(400).json({
+      error: err.message
+    });
   }
-  
+
   if (err.message === 'Only .vcf files are allowed') {
-    return res.status(400).json({ error: err.message });
+    return res.status(400).json({
+      error: err.message
+    });
   }
-  
-  res.status(500).json({ error: 'Internal server error' });
+
+  return res.status(500).json({
+    error: 'Internal server error'
+  });
 });
 
+/* ===============================
+   SERVER START
+================================= */
+
 app.listen(PORT, () => {
-  console.log(`PharmaGuard backend running on port ${PORT}`);
+  console.log(`🚀 PharmaGuard backend running on port ${PORT}`);
 });
 
 module.exports = app;

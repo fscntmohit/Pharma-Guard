@@ -8,8 +8,8 @@
 | Resource | Link |
 |----------|------|
 | 🌐 **Live Demo** | [https://pharma-guard-topaz.vercel.app/]|
-| 🎥 **Demo Video (LinkedIn)** | [] |
-| 📂 **GitHub Repository** | [hhttps://github.com/fscntmohit/Pharma-Guard.git] |
+| 🎥 **Demo Video (LinkedIn)** | [https://www.linkedin.com/posts/fascinate_rift2026-rifthackathon-pharmacogenomics-activity-7430419912659218432-zypO?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEesNGIBK6EVCjHwL6vDr5aFMZkoVPuhDMQ] |
+| 📂 **GitHub Repository** | [https://github.com/fscntmohit/Pharma-Guard.git] |
 
 ---
 

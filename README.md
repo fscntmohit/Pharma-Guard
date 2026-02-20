@@ -316,7 +316,7 @@ curl -X POST http://localhost:3001/api/analyze \
 | *Aditya Kesharwani* | *Backend Developer* | *https://www.linkedin.com/in/aditya-keshari-b26903252/* |
 | *Amogh Patwa* | *Research & Documentation* | *https://www.linkedin.com/in/amogh-patwa-926b7525b* |
 | *Alok Kr. Gupta* | *Frontend* | *https://www.linkedin.com/in/alokkgupta28* |
-> 📝 *Update with your actual team member information*
+
 
 ---
 

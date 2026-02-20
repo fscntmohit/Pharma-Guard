@@ -7,9 +7,9 @@
 
 | Resource | Link |
 |----------|------|
-| 🌐 **Live Demo** | [https://pharma-guard-ten.vercel.app/]|
+| 🌐 **Live Demo** | [https://pharma-guard-topaz.vercel.app/]|
 | 🎥 **Demo Video (LinkedIn)** | [] |
-| 📂 **GitHub Repository** | [https://github.com/Riyansh-adi/Pharma-Guard-.git] |
+| 📂 **GitHub Repository** | [hhttps://github.com/fscntmohit/Pharma-Guard.git] |
 
 ---
 
@@ -312,20 +312,11 @@ curl -X POST http://localhost:3001/api/analyze \
 
 | Name | Role | LinkedIn |
 |------|------|----------|
-| **Mohit** | Full Stack Developer | [LinkedIn Profile](https://linkedin.com/in/YOUR_PROFILE) |
-| *Add Team Member* | *Role* | *LinkedIn* |
-| *Add Team Member* | *Role* | *LinkedIn* |
-
+| **Mohit Yadav** | Full Stack Developer | [LinkedIn Profile](https://www.linkedin.com/in/fascinate/) |
+| *Aditya Kesharwani* | *Backend Developer* | *https://www.linkedin.com/in/aditya-keshari-b26903252/* |
+| *Amogh Patwa* | *Research & Documentation* | *https://www.linkedin.com/in/amogh-patwa-926b7525b* |
+| *Alok Kr. Gupta* | *Frontend* | *https://www.linkedin.com/in/alokkgupta28* |
 > 📝 *Update with your actual team member information*
-
----
-
-## 🙏 Acknowledgments
-
-- [CPIC (Clinical Pharmacogenetics Implementation Consortium)](https://cpicpgx.org/) for pharmacogenomic guidelines
-- [PharmGKB](https://www.pharmgkb.org/) for drug-gene interaction data
-- [OpenAI](https://openai.com/) for GPT API
-- RIFT 2026 Hackathon organizers
 
 ---
 
